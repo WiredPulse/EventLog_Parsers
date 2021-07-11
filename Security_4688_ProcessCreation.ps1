@@ -6,10 +6,10 @@ param(
 )
 
 if($live){
-    $evts = Get-WinEvent -FilterHashtable @{logname='security';id='4688'}
+    $evts = Get-WinEvent -FilterHashtable @{logname="security";id="4688"}
 }
 else{
-    $evts = Get-WinEvent -FilterHashtable @{logname='security';id='4688'}
+    $evts = Get-WinEvent -FilterHashtable @{path="$path";id="4688"}
 }
 
 $evts | Select-Object timecreated, 
