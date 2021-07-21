@@ -17,4 +17,4 @@ else{
 $evts | Select-Object timecreated, 
     @{Label="Process";Expression={$_.properties.value[9..12]}}, 
     @{Label="ClientAddress";Expression={$_.properties.value[25]}}, 
-    @{Label="UserName";Expression={$_.properties.value[23]}}
+    @{Label="UserName";Expression={$_.properties.value[23]}} | Format-Table
